@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Code - Responsive</title>
+    <style>
+        body {
+            display: flex;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            background-color: #f5f5f5;
+        }
+        
+        h2, h3, p {
+            margin: 0;
+        }
+        
+        html {
+            box-sizing: border-box;
+        }
+        
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+       
+        #corp {
+            width: 100%;
+            max-width: 650px;
+            background-color: white;
+            box-shadow: 2px 3px 15px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        #top {
+            vertical-align: top;
+            width: 100%;
+            padding: 30px;
+            background-color: white;
+        }
+        
+        #top h2 {
+            color: #2FADB3;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        #top h3 {
+            color: #B2CC31;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        #top p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        #buttom {
+            display: flex;
+            width: 100%;
+            color: white;
+        }
+        
+        #left {
+            width: 50%;
+            background-color: #31A5A8;
+            padding: 30px;
+        }
+        
+        #left h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        #perm {
+            display: flex;
+            align-items: center;
+        }
+        
+        #amount {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        #pe {
+            opacity: 0.7;
+            margin-left: 10px;
+            font-size: 0.9rem;
+        }
+        
+        #full {
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+        
+        button {
+            background-color: #B2CC31;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        button:hover {
+            cursor: pointer;
+            background-color: #A3AC28;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        #right {
+            width: 50%;
+            background-color: #2FADB3;
+            padding: 30px;
+        }
+        
+        #right h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        #right ul {
+            padding: 0;
+            list-style: none;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        #right ul li {
+            margin-bottom: 8px;
+        }
+        
+        /* Tablet/iPad (Portrait and Landscape) */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+                align-items: flex-start;
+            }
+            
+            #corp {
+                max-width: 100%;
+            }
+            
+            #top {
+                padding: 25px;
+            }
+            
+            #top h2 {
+                font-size: 1.4rem;
+            }
+            
+            #buttom {
+                flex-direction: column;
+            }
+            
+            #left, #right {
+                width: 100%;
+                padding: 25px;
+            }
+            
+            button {
+                margin-top: 25px;
+            }
+        }
+        
+        /* Mobile Phones */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            #corp {
+                border-radius: 5px;
+            }
+            
+            #top {
+                padding: 20px;
+            }
+            
+            #top h2 {
+                font-size: 1.3rem;
+                margin-bottom: 12px;
+            }
+            
+            #top h3 {
+                font-size: 0.95rem;
+                margin-bottom: 12px;
+            }
+            
+            #top p {
+                font-size: 0.9rem;
+            }
+            
+            #left, #right {
+                padding: 20px;
+            }
+            
+            #left h3, #right h3 {
+                font-size: 1rem;
+            }
+            
+            #amount {
+                font-size: 1.8rem;
+            }
+            
+            #pe {
+                font-size: 0.85rem;
+            }
+            
+            #full {
+                font-size: 0.9rem;
+            }
+            
+            button {
+                padding: 14px;
+                margin-top: 20px;
+            }
+            
+            #right ul {
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Small Mobile Phones */
+        @media (max-width: 360px) {
+            #top {
+                padding: 15px;
+            }
+            
+            #top h2 {
+                font-size: 1.2rem;
+            }
+            
+            #left, #right {
+                padding: 15px;
+            }
+            
+            #amount {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="corp">
+        <div id="top">
+            <h2 id="title">Join our community</h2>
+            <h3>30-day, hassle-free money back guarantee</h3>
+            <p>Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+        </div>
+        <div id="buttom">
+            <div id="left">
+                <h3>Monthly Subscription</h3>
+                <p id="perm">
+                    <span id="amount">$29</span>
+                    <span id="pe">per month</span>
+                </p>
+                <p id="full">Full access for less than $1 a day</p>
+                <button onclick="alertme()">Sign Up</button>
+            </div>
+            <div id="right">
+                <h3>Why Us</h3>
+                <ul>
+                    <li>Tutorials by industry experts</li>
+                    <li>Peer & expert code review</li>
+                    <li>Coding exercises</li>
+                    <li>Access to our GitHub repos</li>
+                    <li>Community forums</li>
+                    <li>Flashcard decks</li>
+                    <li>New videos every week</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function alertme() {
+            alert("Welcome! Let's get you signed up!");
+        }
+    </script>
+</body>
+</html>
